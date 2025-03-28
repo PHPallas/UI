@@ -1,0 +1,35 @@
+{
+  "name": "phpallas-ui",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Ui Kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PHPallas/UI.git"
+  },
+  "keywords": [
+    "Ui",
+    "Kit",
+    "Web"
+  ],
+  "author": "Sina Kuhestani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PHPallas/UI/issues"
+  },
+  "homepage": "https://github.com/PHPallas/UI#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.86.0"
+  }
+}
