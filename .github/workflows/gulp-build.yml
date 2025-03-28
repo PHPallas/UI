@@ -3,10 +3,10 @@ name: Build and Deploy with Gulp
 on:
   push:
     branches:
-      - main  # Trigger on pushes to the main branch
+      - main
   pull_request:
     branches:
-      - main  # Trigger on pull requests to the main branch
+      - main
 
 jobs:
   build:
@@ -19,16 +19,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Specify your Node.js version
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Gulp build
-        run: npm run build  # Assumes you have a build script in package.json
-
-      - name: Upload dist folder
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist/
+        run: npm run build
