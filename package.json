@@ -24,12 +24,22 @@
   "homepage": "https://github.com/PHPallas/UI#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^3.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.9",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^10.0.0",
+    "gulp-pug": "^5.0.0",
     "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^2.0.0",
     "sass": "^1.86.0"
   }
 }
