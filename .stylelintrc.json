@@ -1,0 +1,13 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": ["include", "mixin"]
+            }
+        ],
+        "declaration-colon-space-after": "always",
+        "color-no-invalid-hex": true
+    }
+}
