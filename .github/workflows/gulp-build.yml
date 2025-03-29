@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
@@ -32,5 +29,10 @@ jobs:
             NODE_ENV: production # Add any other necessary variables
         run: npm run build
       
-      - name: List dist directory
-        run: ls -la dist
+      - name: Commit dist files
+        run: |
+          git config --local user.email "sina@kuhestani.com"
+          git config --local user.name "Sina Kuhestani"
+          git add dist
+          git commit -m "Update dist directory" || echo "No changes to commit"
+          git push origin HEAD:main
