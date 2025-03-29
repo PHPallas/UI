@@ -19,10 +19,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '18.19.0'
 
       - name: Install dependencies
         run: npm install
+      
+      - name: List installed packages
+        run: npm list --depth=0
 
       - name: Run Gulp build
+        env:
+            NODE_ENV: production # Add any other necessary variables
         run: npm run build
