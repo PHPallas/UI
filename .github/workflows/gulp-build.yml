@@ -35,6 +35,6 @@ jobs:
         run: |
           git config --local user.email "mitrakashmiri@gmail.com"
           git config --local user.name "Mitra Kashmiri"
-          git add dist
-          git commit -m "Update dist directory" || echo "No changes to commit"
-          git push origin main # Change 'main' to your target branch if different
+          git add -f dist
+          git commit -m "Add generated files from dist directory"
+          git push origin main
