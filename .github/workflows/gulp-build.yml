@@ -31,7 +31,7 @@ jobs:
       
       - name: Commit dist files
         run: |
-          git config --local user.email "sina@kuhestani.com"
+          git config --local user.email "sinakuhestani@gmail.com"
           git config --local user.name "Sina Kuhestani"
           git add dist
           git commit -m "Update dist directory" || echo "No changes to commit"
