@@ -1,5 +1,5 @@
 /node_modules/
 dist/*
 !dist/.gitkeep
-*.css
-*.js
+!dist/**/*.css
+!dist/**/*.js
