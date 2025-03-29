@@ -30,9 +30,11 @@ jobs:
         run: npm run build
       
       - name: Commit dist files
+        env:
+          GITHUB_TOKEN: ${{ secrets.MITRA_TOKEN }} # Use your secret here
         run: |
-          git config --local user.email "sinakuhestani@gmail.com"
-          git config --local user.name "Sina Kuhestani"
+          git config --local user.email "mitrakashmiri@gmail.com"
+          git config --local user.name "Mitra Kashmiri"
           git add dist
           git commit -m "Update dist directory" || echo "No changes to commit"
-          git push origin HEAD:main
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/PHPallas/UI.git HEAD:main
