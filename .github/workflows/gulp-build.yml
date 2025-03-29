@@ -26,15 +26,15 @@ jobs:
 
       - name: Run Gulp build
         env:
-            NODE_ENV: production # Add any other necessary variables
+            NODE_ENV: production
         run: npm run build
       
       - name: Commit dist files
         env:
-          GITHUB_TOKEN: ${{ secrets.MITRA_TOKEN }} # Use your secret here
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "mitrakashmiri@gmail.com"
           git config --local user.name "Mitra Kashmiri"
           git add dist
           git commit -m "Update dist directory" || echo "No changes to commit"
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/PHPallas/UI.git HEAD:main
+          git push origin main # Change 'main' to your target branch if different
