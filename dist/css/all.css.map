@@ -1,1 +1,1 @@
-{"version":3,"sources":["test.scss"],"names":[],"mappings":";;;;;;AAAA,EACI,QAAA,YAAA,QAAA,aAAA,QAAA,SAAA,QAAA,YAAA,QAAA,KACA,mBAAA,WAAA,gBAAA,WAAA,WAAA,WACA,mBAAA,IAAA,IAAA,KAAA,cAAA,IAAA,IAAA,KAAA,gBAAA,IAAA,IAAA,KAAA,WAAA,IAAA,IAAA","file":"all.css","sourcesContent":["a {\n    display: flex;\n    box-sizing: border-box;\n    transition: all 0.3s ease; // This should get prefixed\n}\n"]}
+{"version":3,"sources":["test.css"],"names":[],"mappings":";;;;;;AAAA","file":"all.css","sourcesContent":[]}
