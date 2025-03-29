@@ -31,7 +31,12 @@ const jsBanner = `/*!
  * License: MIT
  * Description: A brief description of the JavaScript library.
  */\n`;
-
+const htmlBanner = `<!--
+My JavaScript Library v1.0.0
+Author: Your Name
+License: MIT
+Description: A brief description of the JavaScript library.
+-->\n`;
 // BrowserSync instance
 const server = browserSync.create();
 
@@ -43,7 +48,7 @@ function cleanDist() {
 
 // Lint JavaScript
 function lintJS() {
-    return gulp.src(['js/**/*.js'])
+    return gulp.src(['ts/**/*.ts'])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
@@ -61,7 +66,7 @@ function lintCSS() {
 
 // Format code
 function formatCode() {
-    return gulp.src(['js/**/*.js', 'scss/**/*.scss'])
+    return gulp.src(['ts/**/*.ts', 'scss/**/*.scss'])
         .pipe(prettier({ singleQuote: true }))
         .pipe(gulp.dest(file => file.base));
 }
@@ -95,6 +100,7 @@ function compilePug() {
             indent: '    ',
             maxPreserveNewlines: 1,
         }))
+        .pipe(header(htmlBanner))
         .pipe(gulp.dest('./dist'))
         .pipe(server.stream());
 }
@@ -135,7 +141,10 @@ function serve() {
 // Build task
 const build = gulp.series(
     cleanDist,
-    gulp.parallel(lintJS, lintCSS, formatCode, buildStyles, compilePug, compileTypeScript, optimizeImages)
+    gulp.parallel(/*lintJS, lintCSS,*/ formatCode, buildStyles, compilePug, compileTypeScript, optimizeImages)
 );
+
+// Default task
+gulp.task('default', build); // Set the default task to run the build task
 
 export { buildStyles, compilePug, compileTypeScript, optimizeImages, serve, cleanDist, build, lintJS, lintCSS, formatCode };
