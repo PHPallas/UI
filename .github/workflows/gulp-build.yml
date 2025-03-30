@@ -28,7 +28,6 @@ jobs:
         env:
             NODE_ENV: production
         run: |
-          cd ./build
           npm run build
       
       - name: Commit dist files
