@@ -42,13 +42,13 @@ const server = browserSync.create();
 
 // Clean task
 function cleanDist() {
-    return gulp.src('./dist/*', { read: false, allowEmpty: true })
-        .pipe(clean());
+    return gulp.src('./../dist/*', { read: false, allowEmpty: true })
+        .pipe(clean({force: true}));
 }
 
 // Lint JavaScript
 function lintJS() {
-    return gulp.src(['ts/**/*.ts'])
+    return gulp.src(['./../ts/**/*.ts'])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
@@ -56,7 +56,7 @@ function lintJS() {
 
 // Lint SCSS
 function lintCSS() {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('./../scss/**/*.scss')
         .pipe(stylelint({
             reporters: [
                 { formatter: 'string', console: true }
@@ -66,14 +66,14 @@ function lintCSS() {
 
 // Format code
 function formatCode() {
-    return gulp.src(['ts/**/*.ts', 'scss/**/*.scss'])
+    return gulp.src(['./../ts/**/*.ts', './../scss/**/*.scss'])
         .pipe(prettier({ singleQuote: true }))
         .pipe(gulp.dest(file => file.base));
 }
 
 // Build styles
 function buildStyles() {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('./../scss/**/*.scss')
         .pipe(plumber({ errorHandler: notify.onError("Sass Error: <%= error.message %>") }))
         .pipe(sourcemaps.init())
         .pipe(sassC({ outputStyle: 'compressed' }).on('error', sassC.logError))
@@ -85,13 +85,13 @@ function buildStyles() {
         .pipe(header(jsBanner))
         .pipe(concat('all.css'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./../dist/css'))
         .pipe(server.stream());
 }
 
 // Compile Pug templates
 function compilePug() {
-    return gulp.src('pug/**/*.pug')
+    return gulp.src('./../pug/**/*.pug')
         .pipe(plumber({ errorHandler: notify.onError("Pug Error: <%= error.message %>") }))
         .pipe(pug())
         .pipe(htmlbeautify({
@@ -101,7 +101,7 @@ function compilePug() {
             maxPreserveNewlines: 1,
         }))
         .pipe(header(htmlBanner))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./../dist'))
         .pipe(server.stream());
 }
 
@@ -112,30 +112,30 @@ function compileTypeScript() {
         .pipe(tsProject())
         .pipe(header(jsBanner))
         .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./../dist/js'))
         .pipe(server.stream());
 }
 
 // Optimize images
 function optimizeImages() {
-    return gulp.src('images/**/*')
+    return gulp.src('./../res/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images'));
+        .pipe(gulp.dest('./../dist/images'));
 }
 
 // Serve and watch
 function serve() {
     server.init({
         server: {
-            baseDir: './dist'
+            baseDir: './../dist'
         }
     });
 
-    gulp.watch('scss/**/*.scss', buildStyles);
-    gulp.watch('pug/**/*.pug', compilePug);
-    gulp.watch('ts/**/*.ts', compileTypeScript);
-    gulp.watch('images/**/*', optimizeImages);
-    gulp.watch('./dist/*.html').on('change', server.reload);
+    gulp.watch('./../scss/**/*.scss', buildStyles);
+    gulp.watch('./../pug/**/*.pug', compilePug);
+    gulp.watch('./../ts/**/*.ts', compileTypeScript);
+    gulp.watch('./../res/images/**/*', optimizeImages);
+    gulp.watch('./../dist/*.html').on('change', server.reload);
 }
 
 // Build task
