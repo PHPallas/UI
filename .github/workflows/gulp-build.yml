@@ -27,7 +27,9 @@ jobs:
       - name: Run Gulp build
         env:
             NODE_ENV: production
-        run: npm run build
+        run: |
+            cd build
+            npm run build
       
       - name: Commit dist files
         env:
