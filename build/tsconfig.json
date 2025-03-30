@@ -6,11 +6,11 @@
     "esModuleInterop": true, // Allow default imports from modules with no default export
     "skipLibCheck": true, // Skip type checking of declaration files
     "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
-    "outDir": "./dist/js", // Output directory for compiled files
+    "outDir": "./../dist/js", // Output directory for compiled files
     "sourceMap": true // Generate source maps for debugging
   },
   "include": [
-    "ts/**/*.ts" // Include all TypeScript files in the ts directory
+    "./../ts/**/*.ts" // Include all TypeScript files in the ts directory
   ],
   "exclude": [
     "node_modules", // Exclude node_modules
