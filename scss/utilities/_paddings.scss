@@ -1,0 +1,19 @@
+/*
+ * This file is part of the PHPallas UI.
+ *
+ * © Sina Kuhestani <sinakuhestani@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@use 'sass:map';
+@use '../vars/vars' as *;
+
+@each $prefix, $style in $paddings {
+    @each $index, $coefficient in $coefficients {
+        .p#{$prefix}-#{$index} {
+            padding#{$style}: #{$coefficient}rem !important;
+        }
+    }
+}
