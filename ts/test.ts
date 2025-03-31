@@ -1,1 +1,1 @@
-console.log("test gulp build on github");
+console.log('test gulp build on github');
