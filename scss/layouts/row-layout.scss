@@ -1,0 +1,31 @@
+/*
+ * This file is part of the PHPallas UI.
+ *
+ * © Sina Kuhestani <sinakuhestani@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+.row-layout {
+    display: flex; // Enable Flexbox on the parent
+    flex-direction: column; // Arrange children in a column
+    align-items: flex-start; // Align children to the start of the column
+
+    // Optional: Add some padding and background color
+    // padding: 10px;
+    // background-color: #f0f0f0;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        // Optional: Add some padding and background color to children
+        //   padding: 10px;
+        //   margin: 5px 0;           // Add vertical spacing between rows
+        //   background-color: #fff;   // Background for child rows
+        //   border: 1px solid #ccc;   // Border for child rows
+    }
+}
