@@ -26,17 +26,18 @@ const tsProject = ts.createProject('tsconfig.json');
 
 // Banner comment for JS
 const jsBanner = `/*!
- * My JavaScript Library v1.0.0
- * Author: Your Name
+ * PHPallas UI v1.0
+ * Author: Sina Kuhestani<sinakuhestani@gmail.com>
  * License: MIT
- * Description: A brief description of the JavaScript library.
+ * Description: UI Kit to build modern user interfaces.
  */\n`;
 const htmlBanner = `<!--
-My JavaScript Library v1.0.0
-Author: Your Name
+PHPallas UI v1.0
+Author: Sina Kuhestani<sinakuhestani@gmail.com>
 License: MIT
-Description: A brief description of the JavaScript library.
+Description: UI Kit to build modern user interfaces.
 -->\n`;
+
 // BrowserSync instance
 const server = browserSync.create();
 
@@ -82,8 +83,8 @@ function buildStyles() {
             cascade: false 
         }))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(header(jsBanner))
         .pipe(concat('all.css'))
+        .pipe(header(jsBanner))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./../dist/css'))
         .pipe(server.stream());
