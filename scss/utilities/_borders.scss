@@ -1,0 +1,41 @@
+/*
+ * This file is part of the PHPallas UI.
+ *
+ * © Sina Kuhestani <sinakuhestani@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@use 'sass:map';
+@use '../vars/vars' as *;
+
+.border-separate {
+    border-collapse: separate !important;
+}
+
+.border-collapse {
+    border-collapse: collapse !important;
+}
+
+@each $prefix, $style in $border-prefix {
+    @each $index, $size in $border-size {
+        .b#{$prefix}-#{$index} {
+            border#{$style}-width: #{$size} !important;
+        }
+    }
+
+    @each $index, $value in $border-style {
+        .b#{$prefix}-#{$index} {
+            border#{$style}-style: #{$value} !important;
+        }
+    }
+}
+
+@each $prefix, $style in $border-radius-prefix {
+    @each $index, $size in $border-raduis-size {
+        .r#{$prefix}-#{$index} {
+            border#{$style}-radius: #{$size} !important;
+        }
+    }
+}

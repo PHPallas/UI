@@ -33,3 +33,50 @@ $margins: (
     'l': '-left',
     'r': '-right',
 );
+
+$border-prefix: (
+    '': '',
+    't': '-top',
+    'b': '-bottom',
+    'l': '-left',
+    'r': '-right',
+);
+
+$border-radius-prefix: (
+    '': '',
+    'bl': '-bottom-left',
+    'br': '-bottom-right',
+    'tl': '-top-left',
+    'tr': '-top-right',
+);
+
+$border-size: (
+    0: 0,
+    1: 0.0625rem,
+    2: 0.125rem,
+    3: 0.25rem,
+    4: 0.5rem,
+    5: 1rem,
+);
+
+$border-raduis-size: (
+    'no': 0,
+    'small': 0.25rem,
+    'medium': 0.5rem,
+    'large': 0.75rem,
+    'jumbo': 1rem,
+    'full': 100%,
+);
+
+$border-style: (
+    'none': 'none',
+    'hidden': 'hidden',
+    'dotted': 'dotted',
+    'dashed': 'dashed',
+    'solid': 'solid',
+    'double': 'double',
+    'groove': 'groove',
+    'ridge': 'ridge',
+    'inset': 'inset',
+    'outset': 'outset',
+);
