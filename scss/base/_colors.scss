@@ -1,0 +1,57 @@
+/*
+ * This file is part of the PHPallas UI.
+ *
+ * © Sina Kuhestani <sinakuhestani@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@use 'sass:map';
+
+@use '../vars/colors' as *;
+
+:root {
+    --color-accent-color: #{$color-accent-color}; // AccentColor
+    --color-accent-color-text: #{$color-accent-color-text}; // AccentColorText
+    --color-active-text: #{$color-active-text}; // ActiveText
+    --color-button-border: #{$color-button-border}; // ButtonBorder
+    --color-button-face: #{$color-button-face}; // ButtonFace
+    --color-button-text: #{$color-button-text}; // ButtonText
+    --color-canvas: #{$color-canvas}; // Canvas
+    --color-canvas-text: #{$color-canvas-text}; // CanvasText
+    --color-field: #{$color-field}; // Field
+    --color-field-text: #{$color-field-text}; // FieldText
+    --color-gray-text: #{$color-gray-text}; // GrayText
+    --color-highlight: #{$color-highlight}; // Highlight
+    --color-highlight-text: #{$color-highlight-text}; // HighlightText
+    --color-link-text: #{$color-link-text}; // LinkText
+    --color-mark: #{$color-mark}; // Mark
+    --color-mark-text: #{$color-mark-text}; // MarkText
+    --color-selected-item: #{$color-selected-item}; // SelectedItem
+    --color-selected-item-text: #{$color-selected-item-text}; // SelectedItemText
+    --color-visited-text: #{$color-visited-text}; // VisitedText
+    --color-active-border: #{$color-active-border}; // ActiveBorder
+    --color-active-caption: #{$color-active-caption}; // ActiveCaption
+    --color-app-workspace: #{$color-app-workspace}; // AppWorkspace
+    --color-background: #{$color-background}; // Background
+    --color-button-highlight: #{$color-button-highlight}; // ButtonHighlight
+    --color-button-shadow: #{$color-button-shadow}; // ButtonShadow
+    --color-caption-text: #{$color-caption-text}; // CaptionText
+    --color-inactive-border: #{$color-inactive-border}; // InactiveBorder
+    --color-inactive-caption: #{$color-inactive-caption}; // InactiveCaption
+    --color-inactive-caption-text: #{$color-inactive-caption-text}; // InactiveCaptionText
+    --color-info-background: #{$color-info-background}; // InfoBackground
+    --color-info-text: #{$color-info-text}; // InfoText
+    --color-menu: #{$color-menu}; // Menu
+    --color-menu-text: #{$color-menu-text}; // MenuText
+    --color-scrollbar: #{$color-scrollbar}; // Scrollbar
+    --color-three-d-dark-shadow: #{$color-three-d-dark-shadow}; // ThreeDDarkShadow
+    --color-three-d-face: #{$color-three-d-face}; // ThreeDFace
+    --color-three-d-highlight: #{$color-three-d-highlight}; // ThreeDHighlight
+    --color-three-d-light-shadow: #{$color-three-d-light-shadow}; // ThreeDLightShadow
+    --color-three-d-shadow: #{$color-three-d-shadow}; // ThreeDShadow
+    --color-window: #{$color-window}; // Window
+    --color-window-frame: #{$color-window-frame}; // WindowFrame
+    --color-window-text: #{$color-window-text}; // WindowText
+}
