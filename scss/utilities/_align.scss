@@ -1,0 +1,41 @@
+/*
+ * This file is part of the PHPallas UI.
+ *
+ * © Sina Kuhestani <sinakuhestani@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@use 'sass:map';
+@use '../vars/vars' as *;
+
+@each $item in $align-content {
+    .align-content-#{$item} {
+        align-content: #{$item} !important;
+    }
+}
+
+@each $item in $align-items {
+    .align-items-#{$item} {
+        align-items: #{$item} !important;
+    }
+}
+
+@each $item in $align-self {
+    .align-self-#{$item} {
+        align-self: #{$item} !important;
+    }
+}
+
+@each $item in $text-align {
+    .align-#{$item} {
+        text-align: #{$item} !important;
+    }
+}
+
+@each $item in $vertical-align {
+    .vertical-align-#{$item} {
+        vertical-align: #{$item} !important;
+    }
+}

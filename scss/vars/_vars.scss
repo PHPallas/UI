@@ -80,3 +80,37 @@ $border-style: (
     'inset': 'inset',
     'outset': 'outset',
 );
+
+$align-content: (
+    'stretch',
+    'center',
+    'flex-start',
+    'flex-end',
+    'space-between',
+    'space-around',
+    'space-evenly'
+);
+
+$align-items: ('stretch', 'normal', 'flex-start', 'flex-end', 'baseline');
+
+$align-self: (
+    'auto',
+    'stretch',
+    'flex-start',
+    'flex-end',
+    'center',
+    'baseline'
+);
+
+$text-align: ('left', 'right', 'center', 'justify');
+
+$vertical-align: (
+    'baseline',
+    'sub',
+    'super',
+    'top',
+    'text-top',
+    'middle',
+    'bottom',
+    'text-bottom'
+);
