@@ -20,6 +20,7 @@ import notify from 'gulp-notify';
 import eslint from 'gulp-eslint';
 import stylelint from 'gulp-stylelint';
 import prettier from 'gulp-prettier';
+import ignore from 'gulp-ignore';
 
 const sassC = gulpSass(sass);
 const tsProject = ts.createProject('tsconfig.json');
@@ -93,6 +94,7 @@ function buildStyles() {
 // Compile Pug templates
 function compilePug() {
     return gulp.src('./../pug/**/*.pug')
+        .pipe(ignore.exclude('**/_*.pug'))
         .pipe(plumber({ errorHandler: notify.onError("Pug Error: <%= error.message %>") }))
         .pipe(pug())
         .pipe(htmlbeautify({

@@ -36,6 +36,7 @@
     "gulp-eslint": "^6.0.0",
     "gulp-header": "^2.0.9",
     "gulp-html-beautify": "^1.0.1",
+    "gulp-ignore": "^3.0.0",
     "gulp-imagemin": "^9.1.0",
     "gulp-notify": "^5.0.0",
     "gulp-plumber": "^1.2.1",
