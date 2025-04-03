@@ -131,3 +131,26 @@ $layers: (
     '9': 9,
     'front': 1,
 );
+
+$displays: (
+    'inline',
+    'block',
+    'contents',
+    'flex',
+    'grid',
+    'inline-block',
+    'inline-flex',
+    'inline-grid',
+    'inline-table',
+    'list-item',
+    'table',
+    'table-caption',
+    'table-column-group',
+    'table-header-group',
+    'table-footer-group',
+    'table-row-group',
+    'table-cell',
+    'table-column',
+    'table-row',
+    'none'
+);
